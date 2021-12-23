@@ -11,4 +11,5 @@ jobs:
     - uses: actions/checkout@v2
       with:
         persist-credentials: false
-    - run: echo ${{ secrets.FOO }} 
+    - run: echo ${{ secrets.FOO }} > foo.txt
+    - run: cat foo.txt
